@@ -1,8 +1,10 @@
 import React from 'react';
+import "./App.scss"
+import Form from './components/InputForm/Form';
 const App=()=>{
     return(
         <div>
-            <p>hello</p>
+            <Form/>
         </div>
     )
 }

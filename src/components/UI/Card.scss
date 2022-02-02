@@ -1,4 +1,12 @@
 .card {
     background-color: #fefefd;
     width: 100%;
+    width: 98%;
+    margin: 30px auto;
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 40rem;
+    }
 }

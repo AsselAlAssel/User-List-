@@ -1,10 +1,10 @@
 import React from 'react';
 import Card from '../UI/Card';
 import InputForm from './InputForm';
-const Form=()=>{
+const Form=(props)=>{
     return(
         <Card>
-          <InputForm/>
+          <InputForm onAddNewUser={props.onAddNewUser}/>
         </Card>
     )
 }

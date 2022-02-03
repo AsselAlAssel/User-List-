@@ -8,7 +8,7 @@ const InputForm=()=>{
                 <input type="text" name="userName" />
                 <label htmlFor="age">Age (Years)</label>
                 <input type="number"  name="age"/>
-                <input type="submit" />
+                <input type="submit" value="Add"/>
             </div>
         </form>
     )

@@ -27,7 +27,7 @@ const InputForm = (props) => {
           type="text"
           name="userName"
           value={name}
-          placeholder="Add your name"
+          placeholder="Enter your name"
           onChange={changeNameHandler}
         />
         <label htmlFor="age">Age (Years)</label>
@@ -35,7 +35,7 @@ const InputForm = (props) => {
           type="number"
           name="age"
           value={age}
-          placeholder="Add your age"
+          placeholder="Enter your age"
           onChange={changeAgeHandler}
         />
         <input type="submit" value="Add" />

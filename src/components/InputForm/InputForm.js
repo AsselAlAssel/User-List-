@@ -1,24 +1,20 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./InputForm.scss";
 const InputForm = (props) => {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
+  const nameEntered = useRef("");
+  const ageEntered = useRef("");
   const submitHndler = (e) => {
     e.preventDefault();
+   
     const newUser = {
-      name: name.trim(),
-      age: age.trim(),
+      name: nameEntered.current.value.trim(),
+      age: nameEntered.current.value.trim(),
     };
     props.onAddNewUser(newUser);
-    setAge("");
-    setName("");
+    nameEntered.current.value="";
+    ageEntered.current.value=""
   };
-  const changeNameHandler = (e) => {
-    setName(e.target.value);
-  };
-  const changeAgeHandler = (e) => {
-    setAge(e.target.value);
-  };
+
   return (
     <form action="" onSubmit={submitHndler}>
       <div className="form-control">
@@ -26,17 +22,15 @@ const InputForm = (props) => {
         <input
           type="text"
           name="userName"
-          value={name}
           placeholder="Enter your name"
-          onChange={changeNameHandler}
+          ref={nameEntered}
         />
         <label htmlFor="age">Age (Years)</label>
         <input
           type="number"
           name="age"
-          value={age}
           placeholder="Enter your age"
-          onChange={changeAgeHandler}
+          ref={ageEntered}
         />
         <input type="submit" value="Add" />
       </div>
